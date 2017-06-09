@@ -1,0 +1,8 @@
+<h3>Bookmarks</h3>
+<a (click)="add()">Add mark</a>
+<div *ngIf="marks">
+    <div *ngFor="let mark of marks">
+        <div (click)="applyMark(mark)">{{mark.category|| "All category"}} {{mark.skipping}} seen</div>
+        <button (click)="remove(mark)">Remove</button>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div>
+    <app-settings (settingsUpdated)="handleSettingsChange($event)"></app-settings>
+    <app-categories (categoryUpdated)="handleCategoryChange($event)"></app-categories>
+    <app-bookmarks [query]="query" (bookmarkUsed)="handleBookmarkUsed($event)"></app-bookmarks>
+</div>

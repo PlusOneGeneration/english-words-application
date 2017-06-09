@@ -1,0 +1,8 @@
+<div *ngIf="categories&&categories.length">
+    <h3>Categories</h3>
+    <div *ngFor="let category of categories" >
+        <a (click)="categoryChange(category)">
+            {{category}}
+        </a>
+    </div>
+</div>

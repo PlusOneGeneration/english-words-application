@@ -1,7 +1,7 @@
 <h3>Settings</h3>
 
 <div class="form-group">
-    <div class="radio">
+    <div >
         <label>
             <input type="checkbox" [(ngModel)]="settings.translation" value="true" name="translation"
                    (change)="settingsChange($event)" autocomplete="off">
@@ -9,7 +9,7 @@
         </label>
     </div>
 
-    <div class="radio">
+    <div>
         <label>
             <input type="checkbox" [(ngModel)]="settings.background" value="true" name="background"
                    (change)="settingsChange($event)" autocomplete="off">
@@ -17,7 +17,7 @@
         </label>
     </div>
 
-    <div class="radio">
+    <div>
         <label>
             <input type="checkbox" [(ngModel)]="settings.images" value="true" name="images"
                    (change)="settingsChange($event)" autocomplete="off">
@@ -25,7 +25,7 @@
         </label>
     </div>
 
-    <div class="radio">
+    <div>
         <label>
             <input type="checkbox" [(ngModel)]="settings.imagesPreview" value="true" name="imagesPreview"
                    (change)="settingsChange($event)" autocomplete="off">
@@ -33,7 +33,7 @@
         </label>
     </div>
 
-    <div class="radio">
+    <div>
         <label>
             <input type="checkbox" [(ngModel)]="settings.sentences" value="true" name="sentences"
                    (change)="settingsChange($event)" autocomplete="off">
@@ -41,7 +41,7 @@
         </label>
     </div>
 
-    <div class="radio" *ngIf="settings.sentences">
+    <div *ngIf="settings.sentences">
         <label>
             <input type="checkbox" [(ngModel)]="settings.sentencesWithTranslation" value="true"
                    name="sentencesWithTranslation"
@@ -50,7 +50,7 @@
         </label>
     </div>
 
-    <div class="radio">
+    <div>
         <label>
             <input type="checkbox" [(ngModel)]="settings.synonyms" value="true"
                    name="synonyms"
@@ -59,7 +59,7 @@
         </label>
     </div>
 
-    <div class="radio" *ngIf="settings.synonyms">
+    <div *ngIf="settings.synonyms">
         <label>
             <input type="checkbox" [(ngModel)]="settings.synonymsOnEnglish" value="true"
                    name="synonymsOnEnglish"

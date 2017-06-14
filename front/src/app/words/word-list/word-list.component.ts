@@ -21,9 +21,6 @@ export class WordListComponent implements OnInit {
     throttle = '10';
     scrollDistance = '0';
 
-    // pages: number[] = [1, 2, 3];
-
-
     constructor(private wordsService: WordsService,
                 private storageService: StorageService) {
     }
@@ -36,8 +33,7 @@ export class WordListComponent implements OnInit {
             this.query.category = category;
         }
 
-        this.getWords()
-
+        this.getWords();
     }
 
     getWords() {
@@ -51,7 +47,6 @@ export class WordListComponent implements OnInit {
 
     handleCategoryChange(category) {
         this.query.category = category;
-        // this.query.page = 1;
         this.query.skipping = 0;
         this.words = [];
         this.getWords();
@@ -67,24 +62,10 @@ export class WordListComponent implements OnInit {
         this.getWords();
     }
 
-    // pageChanged(page: number) {
-    //     this.query.page = page;
-    //     this.getWords();
-    // }
-
     onScrollDown() {
-        console.log('scrolled!!');
-
         this.query.skipping += this.query.numberOfWords;
         this.getWords();
 
     }
-
-    // onScrollUp () {
-    //     console.log('scrolledup!!');
-    //     this.query.skipping -= this.query.numberOfWords;
-    //
-    //     this.getWords();
-    // }
 
 }

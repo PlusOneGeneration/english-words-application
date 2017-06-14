@@ -7,5 +7,4 @@ export class Settings {
     synonymsOnEnglish: boolean = true;
     sentences: boolean = true;
     sentencesWithTranslation: boolean = true;
-    sortByPriority: boolean = true;
 }

@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.enable('trust proxy');
 app.set('trust proxy', 1);
 
-app.use('/', express.static(__dirname + '/client/src'));
+app.use('/', express.static(__dirname + '../front/src'));
 
 mongoose.connect('mongodb://localhost/words');
 let db = mongoose.connection;
@@ -19,7 +19,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
 });
 require('./index')(app);
-app.use('/*', express.static(__dirname + '/client/src'));
+app.use('/*', express.static(__dirname + '../front/src'));
 
 
 app.listen(3200, function () {

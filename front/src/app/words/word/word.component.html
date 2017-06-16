@@ -1,38 +1,41 @@
 <div *ngIf="word">
-    <h4>Word</h4>
-    <div>{{word.getText()}}</div>
-    <h4 *ngIf="settings.translation">Translation</h4>
-    <div *ngIf="settings.translation">{{word.getTranslation()}}</div>
+  <h4><strong>Word</strong></h4>
+  <div class="image-background" *ngIf="settings.background"
+       [ngStyle]="{'background-image':'url('+word.getBackground()+')'}">{{word.getText()}}
+  </div>
+  <div *ngIf="!settings.background">{{word.getText()}}</div>
+  <h4 *ngIf="settings.translation"><strong>Translation</strong></h4>
+  <div *ngIf="settings.translation">{{word.getTranslation()}}</div>
 
-    <h4 *ngIf="settings.imagesPreview">Images preview</h4>
-    <div *ngIf="settings.imagesPreview">
-        <div *ngFor="let image of word.getImagesPreview()" style="display: inline-block; margin-right: 5px;">
-            <img src="{{image}}" style="height: 50px;width: auto ">
-        </div>
+  <h4 *ngIf="settings.imagesPreview"><strong>Images preview</strong></h4>
+  <div *ngIf="settings.imagesPreview">
+    <div *ngFor="let image of word.getImagesPreview()" class="image-list">
+      <img src="{{image}}" class="image">
     </div>
+  </div>
 
-    <h4 *ngIf="settings.images">Gallery</h4>
-    <div *ngIf="settings.images">
-        <div *ngFor="let image of word.getImages()" style="display: inline-block; margin-right: 5px;">
-            <img src="{{image}}" style="height: 50px;width: auto ">
-        </div>
+  <h4 *ngIf="settings.images"><strong>Gallery</strong></h4>
+  <div *ngIf="settings.images">
+    <div *ngFor="let image of word.getImages()" class="image-list">
+      <img src="{{image}}" class="image">
     </div>
+  </div>
 
-    <h4 *ngIf="settings.sentences">Examples</h4>
-    <div *ngIf="settings.sentences">
-        <div *ngFor="let sentence of word.getSentences()">{{word.getSentenceInEnglish(sentence)}}
-            <div *ngIf="settings.sentencesWithTranslation">{{word.getSentenceTranslation(sentence)}}
-            </div>
-        </div>
+  <h4 *ngIf="settings.sentences"><strong>Examples</strong></h4>
+  <div *ngIf="settings.sentences">
+    <div *ngFor="let sentence of word.getSentences()">{{word.getSentenceInEnglish(sentence)}}
+      <div *ngIf="settings.sentencesWithTranslation">{{word.getSentenceTranslation(sentence)}}
+      </div>
     </div>
+  </div>
 
-    <h4 *ngIf="settings.synonyms">Synonyms</h4>
-    <div *ngIf="settings.synonyms">
-        <div *ngFor="let synonym of word.getTranslations()">{{word.getSynonyms(synonym)}}
-            <div *ngIf="settings.synonymsOnEnglish">{{word.getSynonymsOnEnglish(synonym)}}
-            </div>
-        </div>
+  <h4 *ngIf="settings.synonyms"><strong>Synonyms</strong></h4>
+  <div *ngIf="settings.synonyms">
+    <div *ngFor="let synonym of word.getTranslations()">{{word.getSynonyms(synonym)}}
+      <div *ngIf="settings.synonymsOnEnglish">{{word.getSynonymsOnEnglish(synonym)}}
+      </div>
     </div>
+  </div>
 
 </div>
 __________________________

@@ -25,7 +25,11 @@ export class Word {
     }
 
     getTranslation() {
-        return this.data.translation.translation;
+        let translation = this.data.translation.translation;
+        if(!translation){
+            translation = 'no translation';
+        }
+        return translation;
     }
 
     getTranslations() {

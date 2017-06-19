@@ -91,3 +91,7 @@
     line-height: 1.1em;
     cursor:pointer;
 }
+
+.avatar-picture {
+    vertical-align: top
+}

@@ -1,8 +1,11 @@
-<div *ngIf="categories&&categories.length">
+<div *ngIf="categories && categories.length" >
     <h3>Categories</h3>
-    <div *ngFor="let category of categories" >
-        <a (click)="categoryChange(category)">
-            {{category}}
-        </a>
+    <div *ngFor="let category of categories">
+        <div class="menu-item">
+            <a (click)="categoryChange(category)">
+                {{category}}
+            </a>
+        </div>
+
     </div>
 </div>

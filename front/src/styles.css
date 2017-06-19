@@ -1,0 +1,93 @@
+.settings-item {
+    width: 200px;
+    text-align: left !important;
+}
+
+.settings-menu {
+    width: 100%;
+}
+
+.btn-settings {
+    z-index: 9;
+    position: fixed;
+    right: -20px;
+    top: 40px;
+    padding: 5px 10px;
+    border-radius: 10px 10px 0 0;
+    width: 90px;
+    transform: rotate(-90deg);
+    border: none;
+    color: #fff;
+}
+
+.settings {
+    z-index: 10;
+    display: block;
+    position: fixed;
+    height: 100vH;
+    width: 25vW;
+    right: -40vW;
+    text-align: center;
+    background: #fff;
+    top: 0;
+    transition: all 400ms ease;
+    box-shadow: 0 0 0 0 #000;
+    overflow-y: auto;
+}
+
+.settings .wrap {
+    padding: 10px 30px;
+}
+
+.settings.show {
+    right: 0;
+    box-shadow: 0 0 100px -30px #000;
+}
+
+.image-background {
+    width: auto;
+    height: 300px;
+    background-repeat: no-repeat;
+}
+
+.image {
+    height: 60px;
+    width: auto
+}
+
+.image-list {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.circle-custom {
+    height: 70px !important;
+    width: 70px !important;
+    display: inline-block !important;
+    border-radius: 100%;
+}
+
+.text-header {
+    display: inline;
+}
+
+.galery-image {
+    height: 150px;
+    width: 160px;
+    margin: 5px 5px 5px 0px;
+}
+
+.menu-item {
+    width: 200px;
+    text-align: left;
+    font-size: 16px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    cursor:pointer;
+}
+
+.icon-position {
+    vertical-align: top;
+    line-height: 1.1em;
+    cursor:pointer;
+}

@@ -1,4 +1,11 @@
-<div>
+<a (click)="toggleSettings()" class="btn btn-success btn-settings" [ngClass]="{active:showSettings}">
+    Settings
+</a>
+<div class="settings" [ngClass]="{show: showSettings}" >
+    <h2>Menu
+        <small (click)="toggleSettings()" class="text-muted" style="cursor: pointer">
+            <i class="glyphicon glyphicon-remove text-primary"></i>
+        </small></h2>
     <app-settings (settingsUpdated)="handleSettingsChange($event)"></app-settings>
     <app-categories (categoryUpdated)="handleCategoryChange($event)"></app-categories>
     <app-bookmarks [query]="query" (bookmarkUsed)="handleBookmarkUsed($event)"></app-bookmarks>

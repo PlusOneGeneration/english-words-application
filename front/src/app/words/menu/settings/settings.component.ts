@@ -30,6 +30,10 @@ export class SettingsComponent implements OnInit {
             this.settings.synonymsOnEnglish = false;
         }
 
+        if (this.settings.images) {
+            this.settings.imagesPreview = false;
+        }
+
         this.settingsUpdated.emit(this.settings);
         this.storageService.add('Settings', this.settings);
     }

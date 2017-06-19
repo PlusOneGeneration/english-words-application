@@ -5,7 +5,7 @@ import {WordsService} from "../words.service";
 import {WordsQuery} from "./WordsQuery";
 import {Settings} from "../menu/settings/Settings";
 import {StorageService} from "../local-storage.service";
-
+declare var $: any;
 
 @Component({
     selector: 'app-word-list',
@@ -26,6 +26,8 @@ export class WordListComponent implements OnInit {
     }
 
     ngOnInit() {
+        $.material.init();
+
         this.query = {skipping: 0, numberOfWords: 8};
 
         let category = this.storageService.get('Category');

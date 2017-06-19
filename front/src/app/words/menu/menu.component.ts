@@ -13,6 +13,8 @@ export class MenuComponent {
     @Output() bookmarkUsed = new EventEmitter();
     @Input() query: WordsQuery;
 
+    showSettings: boolean = false;
+
     handleCategoryChange(category) {
         this.categoryUpdated.emit(category);
     }
@@ -21,7 +23,12 @@ export class MenuComponent {
         this.settingsUpdated.emit(settings);
     }
 
-    handleBookmarkUsed(bookmark){
+    handleBookmarkUsed(bookmark) {
         this.bookmarkUsed.emit(bookmark);
     }
+
+    toggleSettings() {
+        this.showSettings = !this.showSettings;
+    }
+
 }

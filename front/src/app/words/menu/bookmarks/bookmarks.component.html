@@ -1,8 +1,10 @@
-<h3>Bookmarks</h3>
-<button (click)="add()">Add mark</button>
+<h3 >Bookmarks <i class="material-icons icon-position text-primary" (click)="add()">playlist_add</i></h3>
 <div *ngIf="marks">
   <div *ngFor="let mark of marks">
-    <a (click)="applyMark(mark)">{{mark.category|| "All category"}} {{mark.skipping}} seen</a>
-    <button (click)="remove(mark)">Remove</button>
+    <div class="menu-item">
+      <a (click)="applyMark(mark)">{{mark.category|| "All category"}} {{mark.skipping}} seen
+      </a>
+      <i class="glyphicon glyphicon-remove text-primary pull-right" (click)="remove(mark)"></i>
+    </div>
   </div>
 </div>

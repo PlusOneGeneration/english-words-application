@@ -1,4 +1,3 @@
-
 <div class="list-group-item">
   <div class="row-picture avatar-picture">
     <img class="circle-custom" src={{word.getBackground()}} alt="icon">
@@ -6,36 +5,32 @@
   <div class="row-content">
     <div class="list-group-item-heading">
       <h2 class="text-header"><strong>{{word.getText()}}</strong></h2>
-      <h2 class="text-header " *ngIf="settings.translation"> | <strong>{{word.getTranslation()}}</strong></h2>
+      <h2 class="text-header text-muted" *ngIf="settings.translation"> | <strong>{{word.getTranslation()}}</strong></h2>
     </div>
 
     <div class="list-group-item-text">
-      <h4 *ngIf="settings.sentences" class="text-muted"><strong>Examples</strong></h4>
       <div *ngIf="settings.sentences">
         <div *ngFor="let sentence of word.getSentences()">{{word.getSentenceInEnglish(sentence)}}
-          <div *ngIf="settings.sentencesWithTranslation">{{word.getSentenceTranslation(sentence)}}
+          <div *ngIf="settings.sentencesWithTranslation" class="example-item text-muted">{{word.getSentenceTranslation(sentence)}}
           </div>
         </div>
       </div>
-
-      <h4 *ngIf="settings.synonyms" class="text-muted"><strong>Synonyms</strong></h4>
+      <br>
       <div *ngIf="settings.synonyms">
         <div *ngFor="let synonym of word.getTranslations()">{{word.getSynonyms(synonym)}}
-          <div *ngIf="settings.synonymsOnEnglish">{{word.getSynonymsOnEnglish(synonym)}}
+          <div *ngIf="settings.synonymsOnEnglish" class="example-item text-muted">{{word.getSynonymsOnEnglish(synonym)}}
           </div>
         </div>
       </div>
 
     </div>
 
-    <h4 *ngIf="settings.imagesPreview" class="list-group-item-text text-muted"><strong>Images preview</strong></h4>
     <div *ngIf="settings.imagesPreview">
       <div *ngFor="let image of word.getImagesPreview()" class="image-list">
         <img src="{{image}}" class="image">
       </div>
     </div>
 
-    <h4 *ngIf="settings.images" class="list-group-item-text text-muted"><strong>Gallery</strong></h4>
     <div class="row">
       <div *ngIf="settings.images">
         <div *ngFor="let image of word.getImages()">
@@ -45,7 +40,6 @@
         </div>
       </div>
     </div>
-
 
   </div>
 

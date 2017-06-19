@@ -95,3 +95,12 @@
 .avatar-picture {
     vertical-align: top
 }
+
+.example-item {
+    display: inline-block
+}
+
+html body {
+    background-color: white;
+
+}

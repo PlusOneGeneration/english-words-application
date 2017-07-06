@@ -14,6 +14,8 @@ import {WordsService} from "./words.service";
 import {LocalStorageModule} from "angular-2-local-storage";
 import {StorageService} from "./local-storage.service";
 import { BookmarksComponent } from './menu/bookmarks/bookmarks.component';
+import { WordSettingsComponent } from './word-settings/word-settings.component';
+import {SettingsService} from "./menu/settings/settings.service";
 
 @NgModule({
     imports: [
@@ -29,7 +31,8 @@ import { BookmarksComponent } from './menu/bookmarks/bookmarks.component';
     providers: [
         WordsResource,
         WordsService,
-        StorageService
+        StorageService,
+        SettingsService
     ],
     declarations: [
         WordComponent,
@@ -37,7 +40,8 @@ import { BookmarksComponent } from './menu/bookmarks/bookmarks.component';
         MenuComponent,
         SettingsComponent,
         CategoriesComponent,
-        BookmarksComponent
+        BookmarksComponent,
+        WordSettingsComponent
     ]
 })
 

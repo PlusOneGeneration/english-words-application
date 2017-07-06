@@ -25,4 +25,9 @@ export class WordComponent implements OnInit {
         this.word = new Word(this.data);
     }
 
+    handleSettingsChange(settings: Settings){
+        this.settings = settings;
+        // this.settings = Object.assign({}, settings);
+    }
+
 }

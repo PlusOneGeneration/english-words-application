@@ -1,0 +1,64 @@
+<div class="settings-menu">
+  <div class="form-group">
+
+    <div class="checkbox" style="display: inline-block">
+      <label >
+        <input type="checkbox" [(ngModel)]="settings.translation" value={{settings.translation}} name="translation"
+               (change)="settingsChange($event)" autocomplete="off">
+        <i class="material-icons icon-position">g_translate</i>
+      </label>
+    </div>
+
+    <div class="checkbox" style="display: inline-block">
+      <label >
+        <input type="checkbox" [(ngModel)]="settings.sentences" value="true" name="sentences"
+               (change)="settingsChange($event)" autocomplete="off">
+        <i class="material-icons icon-position">g_translate</i>
+      </label>
+    </div>
+
+    <div class="checkbox" style="display: inline-block">
+      <label >
+        <input type="checkbox" [(ngModel)]="settings.sentencesWithTranslation" value="true"
+               name="sentencesWithTranslation"
+               (change)="settingsChange($event)" autocomplete="off">
+        <i class="material-icons icon-position">face</i>
+      </label>
+    </div>
+
+    <div class="checkbox" style="display: inline-block">
+      <label >
+        <input type="checkbox" [(ngModel)]="settings.synonyms" value="true"
+               name="synonyms"
+               (change)="settingsChange($event)" autocomplete="off">
+        <i class="material-icons icon-position">face</i>
+      </label>
+    </div>
+
+    <div class="checkbox" style="display: inline-block">
+      <label >
+        <input type="checkbox" [(ngModel)]="settings.synonymsOnEnglish" value="true"
+               name="synonymsOnEnglish"
+               (change)="settingsChange($event)" autocomplete="off">
+        <i class="material-icons icon-position">face</i>
+      </label>
+    </div>
+
+    <div class="checkbox" style="display: inline-block">
+      <label >
+        <input type="checkbox" [(ngModel)]="settings.imagesPreview" value="true" name="imagesPreview"
+               (change)="settingsChange($event)" autocomplete="off">
+        <i class="material-icons icon-position">face</i>
+      </label>
+    </div>
+
+    <div class="checkbox" style="display: inline-block">
+      <label >
+        <input type="checkbox" [(ngModel)]="settings.images" value="true" name="images"
+               (change)="settingsChange($event)" autocomplete="off">
+        <i class="material-icons icon-position">face</i>
+      </label>
+    </div>
+
+  </div>
+</div>

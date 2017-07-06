@@ -11,7 +11,8 @@
     <div class="list-group-item-text">
       <div *ngIf="settings.sentences">
         <div *ngFor="let sentence of word.getSentences()">{{word.getSentenceInEnglish(sentence)}}
-          <div *ngIf="settings.sentencesWithTranslation" class="example-item text-muted">{{word.getSentenceTranslation(sentence)}}
+          <div *ngIf="settings.sentencesWithTranslation" class="example-item text-muted">
+            {{word.getSentenceTranslation(sentence)}}
           </div>
         </div>
       </div>
@@ -41,7 +42,10 @@
       </div>
     </div>
 
+    <app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)" ></app-word-settings>
+
   </div>
 
 </div>
+
 <div class="list-group-separator"></div>

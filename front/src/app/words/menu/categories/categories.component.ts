@@ -20,11 +20,15 @@ export class CategoriesComponent implements OnInit {
         this.wordsService.getCategories()
             .then((categories) => {
                 this.categories = categories;
+                this.categories.push('All');
             })
 
     }
 
     categoryChange(category: string) {
+        if (category === 'All') {
+            category = null;
+        }
         this.categoryUpdated.emit(category);
         this.storageService.add('Category', category);
     }

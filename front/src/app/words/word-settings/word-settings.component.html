@@ -1,7 +1,7 @@
 <div class="settings-menu">
   <div class="form-group">
 
-    <div class="checkbox" style="display: inline-block">
+    <div class="checkbox local-settings" >
       <label >
         <input type="checkbox" [(ngModel)]="settings.translation" value={{settings.translation}} name="translation"
                (change)="settingsChange($event)" autocomplete="off">
@@ -9,54 +9,54 @@
       </label>
     </div>
 
-    <div class="checkbox" style="display: inline-block">
+    <div class="checkbox local-settings">
       <label >
         <input type="checkbox" [(ngModel)]="settings.sentences" value="true" name="sentences"
+               (change)="settingsChange($event)" autocomplete="off">
+        <i class="material-icons icon-position">description</i>
+      </label>
+    </div>
+
+    <div class="checkbox local-settings" *ngIf="settings.sentences">
+      <label >
+        <input type="checkbox" [(ngModel)]="settings.sentencesWithTranslation" value="true"
+               name="sentencesWithTranslation"
                (change)="settingsChange($event)" autocomplete="off">
         <i class="material-icons icon-position">g_translate</i>
       </label>
     </div>
 
-    <div class="checkbox" style="display: inline-block">
-      <label >
-        <input type="checkbox" [(ngModel)]="settings.sentencesWithTranslation" value="true"
-               name="sentencesWithTranslation"
-               (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">face</i>
-      </label>
-    </div>
-
-    <div class="checkbox" style="display: inline-block">
+    <div class="checkbox local-settings">
       <label >
         <input type="checkbox" [(ngModel)]="settings.synonyms" value="true"
                name="synonyms"
                (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">face</i>
+        <i class="material-icons icon-position">done_all</i>
       </label>
     </div>
 
-    <div class="checkbox" style="display: inline-block">
+    <div class="checkbox local-settings" *ngIf="settings.synonyms">
       <label >
         <input type="checkbox" [(ngModel)]="settings.synonymsOnEnglish" value="true"
                name="synonymsOnEnglish"
                (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">face</i>
+        <i class="material-icons icon-position">g_translate</i>
       </label>
     </div>
 
-    <div class="checkbox" style="display: inline-block">
+    <div class="checkbox local-settings" *ngIf="!settings.images">
       <label >
         <input type="checkbox" [(ngModel)]="settings.imagesPreview" value="true" name="imagesPreview"
                (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">face</i>
+        <i class="material-icons icon-position">image</i>
       </label>
     </div>
 
-    <div class="checkbox" style="display: inline-block">
+    <div class="checkbox local-settings">
       <label >
         <input type="checkbox" [(ngModel)]="settings.images" value="true" name="images"
                (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">face</i>
+        <i class="material-icons icon-position">burst_mode</i>
       </label>
     </div>
 

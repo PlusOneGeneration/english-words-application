@@ -17,7 +17,6 @@ export class WordSettingsComponent implements OnInit {
     }
 
     ngOnInit() {
-
         this.settingsService.settings$
             .subscribe((settings) => {
                 this.settings = settings ? Object.assign({}, settings) : new Settings();

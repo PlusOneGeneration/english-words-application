@@ -102,5 +102,8 @@
 
 html body {
     background-color: white;
+}
 
+.local-settings {
+    display: inline-block;
 }

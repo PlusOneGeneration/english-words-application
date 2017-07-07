@@ -1,51 +1,109 @@
-<div class="list-group-item">
-  <div class="row-picture avatar-picture">
-    <img class="circle-custom" src={{word.getBackground()}} alt="icon">
+<div class="row">
+  <!--<div class="col-md-1">-->
+    <!--<app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)" ></app-word-settings>-->
+  <!--</div>-->
+  <div class="col-md-12">
+
+    <div class="list-group-item">
+      <div class="row-picture avatar-picture">
+        <img class="circle-custom" src={{word.getBackground()}} alt="icon">
+
+      </div>
+      <div class="row-content">
+        <div class="list-group-item-heading">
+          <h2 class="text-header"><strong>{{word.getText()}}</strong></h2>
+          <h2 class="text-header text-muted" *ngIf="settings.translation"> | <strong>{{word.getTranslation()}}</strong></h2>
+        </div>
+
+        <div class="list-group-item-text">
+          <div *ngIf="settings.sentences">
+            <div *ngFor="let sentence of word.getSentences()">{{word.getSentenceInEnglish(sentence)}}
+              <div *ngIf="settings.sentencesWithTranslation" class="example-item text-muted">
+                {{word.getSentenceTranslation(sentence)}}
+              </div>
+            </div>
+          </div>
+          <br>
+          <div *ngIf="settings.synonyms">
+            <div *ngFor="let synonym of word.getTranslations()">{{word.getSynonyms(synonym)}}
+              <div *ngIf="settings.synonymsOnEnglish" class="example-item text-muted">{{word.getSynonymsOnEnglish(synonym)}}
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div *ngIf="settings.imagesPreview">
+          <div *ngFor="let image of word.getImagesPreview()" class="image-list">
+            <img src="{{image}}" class="image">
+          </div>
+        </div>
+
+        <div class="row">
+          <div *ngIf="settings.images">
+            <div *ngFor="let image of word.getImages()">
+              <div class="col-md-2">
+                <img src="{{image}}" class="galery-image">
+              </div>
+            </div>
+          </div>
+        </div>
+        <app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)" ></app-word-settings>
+      </div>
+
+    </div>
+    <div class="list-group-separator"></div>
+
   </div>
-  <div class="row-content">
-    <div class="list-group-item-heading">
-      <h2 class="text-header"><strong>{{word.getText()}}</strong></h2>
-      <h2 class="text-header text-muted" *ngIf="settings.translation"> | <strong>{{word.getTranslation()}}</strong></h2>
-    </div>
-
-    <div class="list-group-item-text">
-      <div *ngIf="settings.sentences">
-        <div *ngFor="let sentence of word.getSentences()">{{word.getSentenceInEnglish(sentence)}}
-          <div *ngIf="settings.sentencesWithTranslation" class="example-item text-muted">
-            {{word.getSentenceTranslation(sentence)}}
-          </div>
-        </div>
-      </div>
-      <br>
-      <div *ngIf="settings.synonyms">
-        <div *ngFor="let synonym of word.getTranslations()">{{word.getSynonyms(synonym)}}
-          <div *ngIf="settings.synonymsOnEnglish" class="example-item text-muted">{{word.getSynonymsOnEnglish(synonym)}}
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div *ngIf="settings.imagesPreview">
-      <div *ngFor="let image of word.getImagesPreview()" class="image-list">
-        <img src="{{image}}" class="image">
-      </div>
-    </div>
-
-    <div class="row">
-      <div *ngIf="settings.images">
-        <div *ngFor="let image of word.getImages()">
-          <div class="col-md-2">
-            <img src="{{image}}" class="galery-image">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)" ></app-word-settings>
-
-  </div>
-
 </div>
 
-<div class="list-group-separator"></div>
+
+<!--<div class="list-group-item">-->
+  <!--<div class="row-picture avatar-picture">-->
+    <!--<img class="circle-custom" src={{word.getBackground()}} alt="icon">-->
+  <!--</div>-->
+  <!--<div class="row-content">-->
+    <!--<div class="list-group-item-heading">-->
+      <!--<h2 class="text-header"><strong>{{word.getText()}}</strong></h2>-->
+      <!--<h2 class="text-header text-muted" *ngIf="settings.translation"> | <strong>{{word.getTranslation()}}</strong></h2>-->
+    <!--</div>-->
+
+    <!--<div class="list-group-item-text">-->
+      <!--<div *ngIf="settings.sentences">-->
+        <!--<div *ngFor="let sentence of word.getSentences()">{{word.getSentenceInEnglish(sentence)}}-->
+          <!--<div *ngIf="settings.sentencesWithTranslation" class="example-item text-muted">-->
+            <!--{{word.getSentenceTranslation(sentence)}}-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<br>-->
+      <!--<div *ngIf="settings.synonyms">-->
+        <!--<div *ngFor="let synonym of word.getTranslations()">{{word.getSynonyms(synonym)}}-->
+          <!--<div *ngIf="settings.synonymsOnEnglish" class="example-item text-muted">{{word.getSynonymsOnEnglish(synonym)}}-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+    <!--</div>-->
+
+    <!--<div *ngIf="settings.imagesPreview">-->
+      <!--<div *ngFor="let image of word.getImagesPreview()" class="image-list">-->
+        <!--<img src="{{image}}" class="image">-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="row">-->
+      <!--<div *ngIf="settings.images">-->
+        <!--<div *ngFor="let image of word.getImages()">-->
+          <!--<div class="col-md-2">-->
+            <!--<img src="{{image}}" class="galery-image">-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+  <!--</div>-->
+
+<!--</div>-->
+
+<!--<div class="list-group-separator"></div>-->

@@ -25,17 +25,17 @@ export class SettingsComponent implements OnInit {
     }
 
     settingsChange(e) {
-        if (!this.settings.sentences) {
-            this.settings.sentencesWithTranslation = false;
-        }
-
-        if (!this.settings.synonyms) {
-            this.settings.synonymsOnEnglish = false;
-        }
-
-        if (this.settings.images) {
-            this.settings.imagesPreview = false;
-        }
+        // if (!this.settings.sentences) {
+        //     this.settings.sentencesWithTranslation = false;
+        // }
+        //
+        // if (!this.settings.synonyms) {
+        //     this.settings.synonymsOnEnglish = false;
+        // }
+        //
+        // if (this.settings.images) {
+        //     this.settings.imagesPreview = false;
+        // }
 
         this.settingsService.settings$.next(this.settings);
         this.settingsUpdated.emit(this.settings);

@@ -25,9 +25,9 @@ export class WordSettingsComponent implements OnInit {
     }
 
     settingsChange() {
-        if (this.settings.images) {
-            this.settings.imagesPreview = false;
-        }
+        // if (this.settings.images) {
+        //     this.settings.imagesPreview = false;
+        // }
         this.wordSettingsUpdated.emit(this.settings);
     }
 

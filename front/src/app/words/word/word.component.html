@@ -1,8 +1,8 @@
 <div class="list-group-item">
   <div class="row-picture avatar-picture">
     <img class="circle-custom" src={{word.getBackground()}} alt="icon">
-
   </div>
+
   <div class="row-content">
     <div class="list-group-item-heading">
       <h2 class="text-header"><strong>{{word.getText()}}</strong></h2>
@@ -10,6 +10,7 @@
     </div>
 
     <div class="list-group-item-text">
+
       <div *ngIf="settings.sentences">
         <div *ngFor="let sentence of word.getSentences()" class="pair-sentences">{{word.getSentenceInEnglish(sentence)}}
           <div *ngIf="settings.sentencesWithTranslation" class="text-muted sentences">
@@ -17,34 +18,36 @@
           </div>
         </div>
       </div>
-      <br>
+
       <div *ngIf="settings.synonyms">
         <div *ngFor="let synonym of word.getTranslations()" class="pair-sentences">{{word.getSynonyms(synonym)}}
           <div *ngIf="settings.synonymsOnEnglish" class="example-item text-muted sentences">
+            |
             <div *ngFor="let word of word.getSynonymsOnEnglish(synonym); let i = index"
                  class="example-item text-muted sentences">
-              {{word}}</div>
+              {{word}},
+            </div>
           </div>
         </div>
       </div>
 
-    </div>
-
-    <div *ngIf="settings.imagesPreview">
-      <div *ngFor="let image of word.getImagesPreview()" class="image-preview">
-        <img src="{{image}}" class="image">
+      <div *ngIf="settings.imagesPreview">
+        <div *ngFor="let image of word.getImagesPreview()" class="image-preview">
+          <img src="{{image}}" class="image">
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div *ngIf="settings.images" class="col-md-12">
+
+      <div *ngIf="settings.images">
         <div *ngFor="let image of word.getImages()" class="galery-image-box">
           <img src="{{image}}" class="galery-image">
         </div>
       </div>
+
+
+      <app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)"></app-word-settings>
     </div>
 
-    <app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)"></app-word-settings>
   </div>
 
 </div>

@@ -53,13 +53,12 @@
 }
 
 .galery-image-box {
-    padding: 10px;
+    padding:  10px 10px 10px 0;
     display: inline-block;
 }
 
 .galery-image {
     width: 150px;
-    /*width: 160px;*/
     display: inline-block;
 }
 

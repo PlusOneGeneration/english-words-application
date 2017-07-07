@@ -25,14 +25,14 @@
     display: block;
     position: fixed;
     height: 100vH;
-    width: 25vW;
-    right: -40vW;
+    right: -320px;
     text-align: center;
     background: #fff;
     top: 0;
     transition: all 400ms ease;
     box-shadow: 0 0 0 0 #000;
     overflow-y: auto;
+    width: 320px;
 }
 
 .settings .wrap {
@@ -45,9 +45,22 @@
 }
 
 .image-background {
+    margin: 5px 5px 5px 0px;
     width: auto;
-    height: 300px;
+    height: 150px;
     background-repeat: no-repeat;
+    background-position: center;
+}
+
+.galery-image-box {
+    padding: 10px;
+    display: inline-block;
+}
+
+.galery-image {
+    width: 150px;
+    /*width: 160px;*/
+    display: inline-block;
 }
 
 .image {
@@ -55,9 +68,9 @@
     width: auto
 }
 
-.image-list {
+.image-preview {
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .circle-custom {
@@ -71,25 +84,20 @@
     display: inline;
 }
 
-.galery-image {
-    height: 150px;
-    width: 160px;
-    margin: 5px 5px 5px 0px;
-}
-
 .menu-item {
     width: 200px;
     text-align: left;
     font-size: 16px;
     margin-left: 60px;
     margin-bottom: 10px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .icon-position {
     vertical-align: top;
     line-height: 1.1em;
-    cursor:pointer;
+    cursor: pointer;
+    margin: 0 10px 0 0;
 }
 
 .avatar-picture {
@@ -107,3 +115,35 @@ html body {
 .local-settings {
     display: inline-block;
 }
+
+.sentences {
+    margin: 3px 5px 3px 0;
+}
+
+.pair-sentences {
+    margin: 5px 0 10px 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.active {
+    color: #777 !important;
+}
+
+.setting-link {
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #BDBDBD;
+    font-weight: 400;
+}
+
+a:hover {
+    color: #777 !important;
+}
+
+label:hover {
+    color: #777 !important;
+}
+

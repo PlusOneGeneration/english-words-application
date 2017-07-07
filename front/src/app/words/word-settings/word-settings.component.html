@@ -1,62 +1,62 @@
 <div class="settings-menu">
   <div class="form-group">
 
-    <div class="checkbox local-settings" >
+    <div class="local-settings " >
       <label >
-        <input type="checkbox" [(ngModel)]="settings.translation" value={{settings.translation}} name="translation"
+        <input class="hidden" type="checkbox" [(ngModel)]="settings.translation" value="true" name="translation"
                (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">g_translate</i>
+        <i class="material-icons icon-position" [ngClass]="{active:settings.translation}">g_translate</i>
       </label>
     </div>
 
-    <div class="checkbox local-settings">
+    <div class=" local-settings">
       <label >
-        <input type="checkbox" [(ngModel)]="settings.sentences" value="true" name="sentences"
+        <input  class="hidden" type="checkbox" [(ngModel)]="settings.sentences" value="true" name="sentences"
                (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">description</i>
+        <i class="material-icons icon-position " [ngClass]="{active:settings.sentences}" >description</i>
       </label>
     </div>
 
-    <div class="checkbox local-settings" *ngIf="settings.sentences">
+    <div class=" local-settings">
       <label >
-        <input type="checkbox" [(ngModel)]="settings.sentencesWithTranslation" value="true"
+        <input class="hidden" type="checkbox" [(ngModel)]="settings.sentencesWithTranslation" value="true"
                name="sentencesWithTranslation"
                (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">g_translate</i>
+        <i class="material-icons icon-position" [ngClass]="{active:settings.sentencesWithTranslation}" >g_translate</i>
       </label>
     </div>
 
-    <div class="checkbox local-settings">
+    <div class=" local-settings">
       <label >
-        <input type="checkbox" [(ngModel)]="settings.synonyms" value="true"
+        <input  class="hidden" type="checkbox" [(ngModel)]="settings.synonyms" value="true"
                name="synonyms"
                (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">done_all</i>
+        <i class="material-icons icon-position" [ngClass]="{active:settings.synonyms}">done_all</i>
       </label>
     </div>
 
-    <div class="checkbox local-settings" *ngIf="settings.synonyms">
+    <div class="local-settings" >
       <label >
-        <input type="checkbox" [(ngModel)]="settings.synonymsOnEnglish" value="true"
+        <input  class="hidden" type="checkbox" [(ngModel)]="settings.synonymsOnEnglish" value="true"
                name="synonymsOnEnglish"
                (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">g_translate</i>
+        <i class="material-icons icon-position " [ngClass]="{active:settings.synonymsOnEnglish}">g_translate</i>
       </label>
     </div>
 
-    <div class="checkbox local-settings" *ngIf="!settings.images">
+    <div class=" local-settings">
       <label >
-        <input type="checkbox" [(ngModel)]="settings.imagesPreview" value="true" name="imagesPreview"
+        <input class="hidden" type="checkbox" [(ngModel)]="settings.imagesPreview" value="true" name="imagesPreview"
                (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">image</i>
+        <i class="material-icons icon-position" [ngClass]="{active:settings.imagesPreview}">image</i>
       </label>
     </div>
 
-    <div class="checkbox local-settings">
+    <div class="local-settings ">
       <label >
-        <input type="checkbox" [(ngModel)]="settings.images" value="true" name="images"
+        <input class="hidden" type="checkbox" [(ngModel)]="settings.images" value="true" name="images"
                (change)="settingsChange($event)" autocomplete="off">
-        <i class="material-icons icon-position">burst_mode</i>
+        <i class="material-icons icon-position" [ngClass]="{active:settings.images}">burst_mode</i>
       </label>
     </div>
 

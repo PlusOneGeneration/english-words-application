@@ -10,6 +10,7 @@ import {WordsQuery} from "../../word-list/WordsQuery";
 export class BookmarksComponent implements OnInit {
 
     marks: any[] = [];
+    currentMark: any = null;
 
     @Input() query: WordsQuery = {};
     @Output() bookmarkUsed = new EventEmitter();
@@ -44,6 +45,7 @@ export class BookmarksComponent implements OnInit {
     }
 
     applyMark(mark) {
+        this.currentMark = mark;
         this.bookmarkUsed.emit(mark);
     }
 

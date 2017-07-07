@@ -9,6 +9,7 @@ import {StorageService} from "../../local-storage.service";
 })
 export class CategoriesComponent implements OnInit {
     categories: String[] = [];
+    currentCategory: any;
 
     @Output() categoryUpdated = new EventEmitter();
 
@@ -17,6 +18,7 @@ export class CategoriesComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.currentCategory = this.storageService.get('Category') ? this.storageService.get('Category') : 'All';
         this.wordsService.getCategories()
             .then((categories) => {
                 this.categories = categories;
@@ -26,6 +28,7 @@ export class CategoriesComponent implements OnInit {
     }
 
     categoryChange(category: string) {
+        this.currentCategory = category;
         if (category === 'All') {
             category = null;
         }

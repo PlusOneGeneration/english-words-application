@@ -1,36 +1,28 @@
 <h3>Settings</h3>
 
-<div class="settings-menu">
+<div class="settings-menu menu-item">
     <div class="form-group">
-        <div class="checkbox">
-            <label class="settings-item">
-                <input type="checkbox" [(ngModel)]="settings.translation" value="true" name="translation"
+        <div>
+            <label class="settings-item" [ngClass]="{active:settings.translation}">
+                <input type="checkbox" class="hidden" [(ngModel)]="settings.translation" value="true" name="translation"
                        (change)="settingsChange($event)" autocomplete="off">
-                <i class="material-icons icon-position">g_translate</i>
+                <i class="material-icons icon-position" >g_translate</i>
                 translation
             </label>
         </div>
 
-        <!--<div class="checkbox">-->
-        <!--<label>-->
-        <!--<input type="checkbox" [(ngModel)]="settings.background" value="true" name="background"-->
-        <!--(change)="settingsChange($event)" autocomplete="off">-->
-        <!--background-->
-        <!--</label>-->
-        <!--</div>-->
-
-        <div class="checkbox">
-            <label class="settings-item">
-                <input type="checkbox" [(ngModel)]="settings.sentences" value="true" name="sentences"
+        <div>
+            <label class="settings-item" [ngClass]="{active:settings.sentences}">
+                <input class="hidden" type="checkbox" [(ngModel)]="settings.sentences" value="true" name="sentences"
                        (change)="settingsChange($event)" autocomplete="off">
                 <i class="material-icons icon-position">description</i>
                 sentences
             </label>
         </div>
 
-        <div *ngIf="settings.sentences" class="checkbox">
-            <label class="settings-item">
-                <input type="checkbox" [(ngModel)]="settings.sentencesWithTranslation" value="true"
+        <div>
+            <label class="settings-item" [ngClass]="{active:settings.sentencesWithTranslation}">
+                <input class="hidden" type="checkbox" [(ngModel)]="settings.sentencesWithTranslation" value="true"
                        name="sentencesWithTranslation"
                        (change)="settingsChange($event)" autocomplete="off">
                 <i class="material-icons icon-position">g_translate</i>
@@ -38,19 +30,19 @@
             </label>
         </div>
 
-        <div class="checkbox">
-            <label class="settings-item">
-                <input type="checkbox" [(ngModel)]="settings.synonyms" value="true"
+        <div>
+            <label class="settings-item" [ngClass]="{active:settings.synonyms}">
+                <input class="hidden" type="checkbox" [(ngModel)]="settings.synonyms" value="true"
                        name="synonyms"
                        (change)="settingsChange($event)" autocomplete="off">
-                <i class="material-icons icon-position">done_all</i>
+                <i class="material-icons icon-position" >done_all</i>
                 synonyms
             </label>
         </div>
 
-        <div *ngIf="settings.synonyms" class="checkbox">
-            <label class="settings-item">
-                <input type="checkbox" [(ngModel)]="settings.synonymsOnEnglish" value="true"
+        <div>
+            <label class="settings-item" [ngClass]="{active:settings.synonymsOnEnglish}">
+                <input class="hidden" type="checkbox" [(ngModel)]="settings.synonymsOnEnglish" value="true"
                        name="synonymsOnEnglish"
                        (change)="settingsChange($event)" autocomplete="off">
                 <i class="material-icons icon-position">g_translate</i>
@@ -58,18 +50,18 @@
             </label>
         </div>
 
-        <div class="checkbox" *ngIf="!settings.images" >
-            <label class="settings-item">
-                <input type="checkbox" [(ngModel)]="settings.imagesPreview" value="true" name="imagesPreview"
+        <div>
+            <label class="settings-item" [ngClass]="{active:settings.imagesPreview}">
+                <input class="hidden" type="checkbox" [(ngModel)]="settings.imagesPreview" value="true" name="imagesPreview"
                        (change)="settingsChange($event)" autocomplete="off">
-                <i class="material-icons icon-position">image</i>
+                <i class="material-icons icon-position" >image</i>
                 images preview
             </label>
         </div>
 
-        <div class="checkbox">
-            <label class="settings-item">
-                <input type="checkbox" [(ngModel)]="settings.images" value="true" name="images"
+        <div>
+            <label class="settings-item" [ngClass]="{active:settings.images}">
+                <input class="hidden" type="checkbox" [(ngModel)]="settings.images" value="true" name="images"
                        (change)="settingsChange($event)" autocomplete="off">
                 <i class="material-icons icon-position">burst_mode</i>
                 images

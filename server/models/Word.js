@@ -14,6 +14,8 @@ module.exports = function () {
         tags: []
 
     });
+    wordSchema.index({priority: 1});
+    wordSchema.index({priority: 1, tags: 1});
 
     let Word = mongoose.model('Word', wordSchema);
 };

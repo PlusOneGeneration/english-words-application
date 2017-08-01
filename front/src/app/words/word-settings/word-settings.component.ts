@@ -10,13 +10,13 @@ import {SettingsService} from "../menu/settings/settings.service";
 export class WordSettingsComponent implements OnInit {
 
     @Output() wordSettingsUpdated = new EventEmitter();
-    settings: any;
-
+    settings: Settings = new Settings();
 
     constructor(private settingsService: SettingsService) {
     }
 
     ngOnInit() {
+        // this.settings = new Settings();
         this.settingsService.settings$
             .subscribe((settings) => {
                 this.settings = settings ? Object.assign({}, settings) : new Settings();

@@ -28,7 +28,7 @@ export class WordListComponent implements OnInit {
 
     ngOnInit() {
         $.material.init();
-
+        this.loading = true;
         this.query = {skipping: 0, numberOfWords: 7};
 
         let category = this.storageService.get('Category');

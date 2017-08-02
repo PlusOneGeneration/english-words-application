@@ -9,7 +9,6 @@ import {WordsResource} from "./words.resource";
 import {WordListComponent} from './word-list/word-list.component';
 import {WordsService} from "./words.service";
 import {StorageService} from "../local-storage.service";
-import { WordSettingsComponent } from './word-settings/word-settings.component';
 import {MenuService} from "../menu/menu.service";
 import {UiModule} from "../ui/ui.module";
 import {MenuModule} from "../menu/menu.module";
@@ -17,7 +16,6 @@ import {MenuModule} from "../menu/menu.module";
 @NgModule({
     imports: [
         CommonModule,
-        FormsModule,
         WordsRoutingModule,
         InfiniteScrollModule,
         UiModule,
@@ -31,8 +29,7 @@ import {MenuModule} from "../menu/menu.module";
     ],
     declarations: [
         WordComponent,
-        WordListComponent,
-        WordSettingsComponent
+        WordListComponent
 ]
 })
 

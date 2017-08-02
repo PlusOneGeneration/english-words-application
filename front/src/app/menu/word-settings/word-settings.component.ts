@@ -1,11 +1,11 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
-import {Settings} from "../../menu/settings/Settings";
-import {MenuService} from "../../menu/menu.service";
+import {Settings} from "../settings/Settings";
+import {MenuService} from "../menu.service";
 
 @Component({
     selector: 'app-word-settings',
-    templateUrl: './word-settings.component.html',
-    styleUrls: ['./word-settings.component.css']
+    templateUrl: 'word-settings.component.html',
+    styleUrls: ['word-settings.component.css']
 })
 export class WordSettingsComponent implements OnInit {
 

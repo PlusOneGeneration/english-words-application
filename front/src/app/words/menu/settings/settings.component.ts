@@ -1,7 +1,7 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {Settings} from "./Settings";
 import {StorageService} from "../../local-storage.service";
-import {SettingsService} from "./settings.service";
+import {MenuService} from "../menu.service";
 
 @Component({
     selector: 'app-settings',
@@ -14,7 +14,7 @@ export class SettingsComponent implements OnInit {
     settings: any;
 
     constructor(private storageService: StorageService,
-                private  settingsService: SettingsService) {
+                private  settingsService: MenuService) {
     }
 
     ngOnInit() {

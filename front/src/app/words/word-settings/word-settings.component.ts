@@ -1,6 +1,6 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {Settings} from "../menu/settings/Settings";
-import {SettingsService} from "../menu/settings/settings.service";
+import {MenuService} from "../menu/menu.service";
 
 @Component({
     selector: 'app-word-settings',
@@ -12,7 +12,7 @@ export class WordSettingsComponent implements OnInit {
     @Output() wordSettingsUpdated = new EventEmitter();
     settings: Settings = new Settings();
 
-    constructor(private settingsService: SettingsService) {
+    constructor(private settingsService: MenuService) {
     }
 
     ngOnInit() {

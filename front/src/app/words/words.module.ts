@@ -15,7 +15,7 @@ import {LocalStorageModule} from "angular-2-local-storage";
 import {StorageService} from "./local-storage.service";
 import { BookmarksComponent } from './menu/bookmarks/bookmarks.component';
 import { WordSettingsComponent } from './word-settings/word-settings.component';
-import {SettingsService} from "./menu/settings/settings.service";
+import {MenuService} from "./menu/menu.service";
 import {LoaderComponent} from "../loader/loader.component";
 
 @NgModule({
@@ -33,7 +33,7 @@ import {LoaderComponent} from "../loader/loader.component";
         WordsResource,
         WordsService,
         StorageService,
-        SettingsService
+        MenuService
     ],
     declarations: [
         WordComponent,

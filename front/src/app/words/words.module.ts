@@ -7,16 +7,12 @@ import {WordsRoutingModule} from './words-routing.module';
 import {WordComponent} from './word/word.component';
 import {WordsResource} from "./words.resource";
 import {WordListComponent} from './word-list/word-list.component';
-import {MenuComponent} from './menu/menu.component';
-import {SettingsComponent} from './menu/settings/settings.component';
-import {CategoriesComponent} from './menu/categories/categories.component';
 import {WordsService} from "./words.service";
-import {LocalStorageModule} from "angular-2-local-storage";
-import {StorageService} from "./local-storage.service";
-import { BookmarksComponent } from './menu/bookmarks/bookmarks.component';
+import {StorageService} from "../local-storage.service";
 import { WordSettingsComponent } from './word-settings/word-settings.component';
-import {MenuService} from "./menu/menu.service";
-import {LoaderComponent} from "../loader/loader.component";
+import {MenuService} from "../menu/menu.service";
+import {UiModule} from "../ui/ui.module";
+import {MenuModule} from "../menu/menu.module";
 
 @NgModule({
     imports: [
@@ -24,10 +20,8 @@ import {LoaderComponent} from "../loader/loader.component";
         FormsModule,
         WordsRoutingModule,
         InfiniteScrollModule,
-        LocalStorageModule.withConfig({
-            prefix: 'my-app',
-            storageType: 'localStorage'
-        })
+        UiModule,
+        MenuModule
     ],
     providers: [
         WordsResource,
@@ -38,12 +32,7 @@ import {LoaderComponent} from "../loader/loader.component";
     declarations: [
         WordComponent,
         WordListComponent,
-        MenuComponent,
-        SettingsComponent,
-        CategoriesComponent,
-        BookmarksComponent,
-        WordSettingsComponent,
-        LoaderComponent
+        WordSettingsComponent
 ]
 })
 

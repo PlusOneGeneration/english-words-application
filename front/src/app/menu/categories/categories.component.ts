@@ -1,11 +1,11 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
-import {WordsService} from "../../words.service";
 import {StorageService} from "../../local-storage.service";
+import {WordsService} from "../../words/words.service";
 
 @Component({
     selector: 'app-categories',
-    templateUrl: './categories.component.html',
-    styleUrls: ['./categories.component.css']
+    templateUrl: 'categories.component.html',
+    styleUrls: ['categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
     categories: String[] = [];

@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {Settings} from "../menu/settings/Settings";
+import {Settings} from "../../menu/settings/Settings";
 import {WordValue} from "./WordValue";
 import {Word} from "./Word";
 

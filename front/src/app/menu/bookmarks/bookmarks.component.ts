@@ -1,11 +1,11 @@
 import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 import {StorageService} from "../../local-storage.service";
-import {WordsQuery} from "../../word-list/WordsQuery";
+import {WordsQuery} from "../../words/word-list/WordsQuery";
 
 @Component({
     selector: 'app-bookmarks',
-    templateUrl: './bookmarks.component.html',
-    styleUrls: ['./bookmarks.component.css']
+    templateUrl: 'bookmarks.component.html',
+    styleUrls: ['bookmarks.component.css']
 })
 export class BookmarksComponent implements OnInit {
 

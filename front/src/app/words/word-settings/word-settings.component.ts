@@ -1,6 +1,6 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
-import {Settings} from "../menu/settings/Settings";
-import {MenuService} from "../menu/menu.service";
+import {Settings} from "../../menu/settings/Settings";
+import {MenuService} from "../../menu/menu.service";
 
 @Component({
     selector: 'app-word-settings',

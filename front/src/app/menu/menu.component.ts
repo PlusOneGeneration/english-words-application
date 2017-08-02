@@ -1,10 +1,10 @@
 import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
-import {WordsQuery} from "../word-list/WordsQuery";
+import {WordsQuery} from "../words/word-list/WordsQuery";
 
 @Component({
     selector: 'app-menu',
-    templateUrl: './menu.component.html',
-    styleUrls: ['./menu.component.css']
+    templateUrl: 'menu.component.html',
+    styleUrls: ['menu.component.css']
 })
 export class MenuComponent {
 

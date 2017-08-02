@@ -1,12 +1,12 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {Settings} from "./Settings";
-import {StorageService} from "../../local-storage.service";
 import {MenuService} from "../menu.service";
+import {StorageService} from "../../local-storage.service";
 
 @Component({
     selector: 'app-settings',
-    templateUrl: './settings.component.html',
-    styleUrls: ['./settings.component.css']
+    templateUrl: 'settings.component.html',
+    styleUrls: ['settings.component.css']
 })
 export class SettingsComponent implements OnInit {
     @Output() settingsUpdated = new EventEmitter();

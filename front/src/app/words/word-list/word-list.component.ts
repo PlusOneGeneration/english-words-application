@@ -3,8 +3,8 @@ import {Component, OnInit} from '@angular/core';
 import {WordValue} from "../word/WordValue";
 import {WordsService} from "../words.service";
 import {WordsQuery} from "./WordsQuery";
-import {Settings} from "../menu/settings/Settings";
-import {StorageService} from "../local-storage.service";
+import {Settings} from "../../menu/settings/Settings";
+import {StorageService} from "../../local-storage.service";
 declare var $: any;
 
 @Component({

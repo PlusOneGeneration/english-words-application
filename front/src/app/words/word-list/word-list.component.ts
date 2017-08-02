@@ -19,7 +19,7 @@ export class WordListComponent implements OnInit {
     query: WordsQuery;
 
     throttle = '100';
-    scrollDistance = '14';
+    scrollDistance = '17';
     loading: boolean = false;
 
     constructor(private wordsService: WordsService,

@@ -35,7 +35,6 @@ export class WordListComponent implements OnInit {
         if (category) {
             this.query.category = category;
         }
-
         this.getWords();
     }
 
@@ -75,12 +74,10 @@ export class WordListComponent implements OnInit {
     }
 
     onScrollDown() {
-        console.log('scroll');
-        console.log('this.query.skipping', this.query.skipping);
         if (!this.loading) {
-            this.query.skipping = this.query.skipping + this.query.numberOfWords;
+            this.query.skipping += this.query.numberOfWords;
             this.getWords();
-            this.query.numberOfWords = 30;
+            this.query.numberOfWords = 10;
         }
         this.loading = true;
     }

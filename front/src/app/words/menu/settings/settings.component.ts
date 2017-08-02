@@ -14,30 +14,18 @@ export class SettingsComponent implements OnInit {
     settings: any;
 
     constructor(private storageService: StorageService,
-                private  settingsService: MenuService) {
+                private  menuService: MenuService) {
     }
 
     ngOnInit() {
         let settings = this.storageService.get('Settings');
         this.settings = settings ? settings : new Settings();
-        this.settingsService.settings$.next(this.settings);
+        this.menuService.settings$.next(this.settings);
         this.settingsUpdated.emit(this.settings);
     }
 
     settingsChange(e) {
-        // if (!this.settings.sentences) {
-        //     this.settings.sentencesWithTranslation = false;
-        // }
-        //
-        // if (!this.settings.synonyms) {
-        //     this.settings.synonymsOnEnglish = false;
-        // }
-        //
-        // if (this.settings.images) {
-        //     this.settings.imagesPreview = false;
-        // }
-
-        this.settingsService.settings$.next(this.settings);
+        this.menuService.settings$.next(this.settings);
         this.settingsUpdated.emit(this.settings);
         this.storageService.add('Settings', this.settings);
     }

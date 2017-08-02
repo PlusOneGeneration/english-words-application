@@ -41,15 +41,14 @@ export class BookmarksComponent implements OnInit {
 
     get() {
         let marks: any = this.storageService.get('Bookmarks');
-        if(marks){
+        if (marks) {
             this.marks = JSON.parse(marks.toString());
         }
-
     }
 
     applyMark(mark) {
         this.currentMark = mark;
-        this.bookmarkUsed.emit(mark);
+        this.bookmarkUsed.emit(Object.assign({}, mark));
     }
 
 }

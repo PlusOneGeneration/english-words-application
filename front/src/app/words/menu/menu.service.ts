@@ -7,7 +7,6 @@ export class MenuService {
 
   settings$: BehaviorSubject<Settings> = new BehaviorSubject<Settings>(null);
 
-
   constructor() { }
 
 }

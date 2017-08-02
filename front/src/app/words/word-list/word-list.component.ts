@@ -18,8 +18,8 @@ export class WordListComponent implements OnInit {
     settings: Settings;
     query: WordsQuery;
 
-    throttle = '10';
-    scrollDistance = '0';
+    throttle = '100';
+    scrollDistance = '14';
     loading: boolean = false;
 
     constructor(private wordsService: WordsService,
@@ -29,7 +29,7 @@ export class WordListComponent implements OnInit {
     ngOnInit() {
         $.material.init();
 
-        this.query = {skipping: 0, numberOfWords: 25};
+        this.query = {skipping: 0, numberOfWords: 7};
 
         let category = this.storageService.get('Category');
         if (category) {
@@ -42,13 +42,18 @@ export class WordListComponent implements OnInit {
     getWords() {
         this.wordsService.getWords(this.query)
             .then((words) => {
-                words.forEach((word) => {
+                if (words.length !== 0) {
+                    words.forEach((word) => {
+                        this.loading = false;
+                        this.words.push(word);
+                    })
+                } else {
                     this.loading = false;
-                    this.words.push(word);
-                })
+                }
             })
             .catch((err) => {
-                this.loading = true;
+                console.log('err', err);
+                this.loading = false;
             })
     }
 
@@ -70,9 +75,12 @@ export class WordListComponent implements OnInit {
     }
 
     onScrollDown() {
-        this.query.skipping += this.query.numberOfWords;
+        console.log('scroll');
+        console.log('this.query.skipping', this.query.skipping);
         if (!this.loading) {
+            this.query.skipping = this.query.skipping + this.query.numberOfWords;
             this.getWords();
+            this.query.numberOfWords = 30;
         }
         this.loading = true;
     }

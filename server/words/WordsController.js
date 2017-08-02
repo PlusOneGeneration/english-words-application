@@ -7,6 +7,7 @@ var exports = module.exports = {};
 
 exports.getCategories = function (req, res, next) {
     Word.distinct('tags')
+        .lean()
         .exec()
         .then((categories) => res.json(categories))
 };
@@ -39,6 +40,7 @@ exports.getWords = function (req, res, next) {
         .skip(+req.query.skipping)
         .limit(+req.query.numberOfWords)
         .sort({'priority': 1})
+        .lean()
         .exec()
         .then((words) => {
                 res.json(words)

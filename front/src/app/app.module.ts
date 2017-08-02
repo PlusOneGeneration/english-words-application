@@ -12,6 +12,7 @@ import {ResourceModule} from "ng2-resource-rest";
 @NgModule({
     declarations: [
         AppComponent
+
     ],
     imports: [
         BrowserModule,

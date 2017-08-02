@@ -16,6 +16,7 @@ import {StorageService} from "./local-storage.service";
 import { BookmarksComponent } from './menu/bookmarks/bookmarks.component';
 import { WordSettingsComponent } from './word-settings/word-settings.component';
 import {SettingsService} from "./menu/settings/settings.service";
+import {LoaderComponent} from "../loader/loader.component";
 
 @NgModule({
     imports: [
@@ -41,8 +42,9 @@ import {SettingsService} from "./menu/settings/settings.service";
         SettingsComponent,
         CategoriesComponent,
         BookmarksComponent,
-        WordSettingsComponent
-    ]
+        WordSettingsComponent,
+        LoaderComponent
+]
 })
 
 export class WordsModule {

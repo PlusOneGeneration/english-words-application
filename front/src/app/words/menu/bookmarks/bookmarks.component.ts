@@ -41,7 +41,10 @@ export class BookmarksComponent implements OnInit {
 
     get() {
         let marks: any = this.storageService.get('Bookmarks');
-        this.marks = JSON.parse(marks.toString());
+        if(marks){
+            this.marks = JSON.parse(marks.toString());
+        }
+
     }
 
     applyMark(mark) {

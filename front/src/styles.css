@@ -11,10 +11,10 @@
     z-index: 9;
     position: fixed;
     right: -20px;
-    top: 40px;
+    top: 60px;
     padding: 5px 10px;
     border-radius: 10px 10px 0 0;
-    width: 90px;
+    width: 80px;
     transform: rotate(-90deg);
     border: none;
     color: #fff;
@@ -111,10 +111,6 @@ html body {
     background-color: white;
 }
 
-.local-settings {
-    display: inline-block;
-}
-
 .sentences {
     margin: 0 5px 0 0!important;
 }
@@ -138,6 +134,21 @@ html body {
     font-weight: 400;
 }
 
+/*.settings-label {*/
+    /*height: 20px !important;*/
+    /*margin: 5px 0 0 0 !important;*/
+/*}*/
+
+.local-settings {
+    display: inline-block;
+    /*background-color: white !important;*/
+    /*color: #BDBDBD !important;*/
+}
+
+.wrapper-local-settings {
+    margin: 20px 0 15px 15px
+}
+
 @media screen and (min-width: 800px) {
     a:hover {
     color: #777 !important;
@@ -145,5 +156,9 @@ html body {
 
     label:hover {
     color: #777 !important;
+    }
+
+    .wrapper-local-settings {
+        margin: 20px 0 15px 105px
     }
 }

@@ -1,9 +1,15 @@
+<div class="wrapper-local-settings">
+  <app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)"></app-word-settings>
+</div>
+
 <div class="list-group-item">
   <div class="row-picture avatar-picture">
     <img class="circle-custom" src={{word.getBackground()}} alt="icon">
+    <!--<app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)"></app-word-settings>-->
   </div>
 
   <div class="row-content">
+    <!--<app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)"></app-word-settings>-->
     <div class="list-group-item-heading">
       <h2 class="text-header"><strong>{{word.getText()}}</strong></h2>
       <h2 class="text-header text-muted" *ngIf="settings.translation"> | <strong>{{word.getTranslation()}}</strong></h2>
@@ -45,7 +51,7 @@
       </div>
 
 
-      <app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)"></app-word-settings>
+      <!--<app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)"></app-word-settings>-->
     </div>
 
   </div>

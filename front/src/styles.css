@@ -138,11 +138,12 @@ html body {
     font-weight: 400;
 }
 
-a:hover {
+@media screen and (min-width: 800px) {
+    a:hover {
     color: #777 !important;
-}
+    }
 
-label:hover {
+    label:hover {
     color: #777 !important;
+    }
 }
-

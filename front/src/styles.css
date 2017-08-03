@@ -53,7 +53,7 @@
 }
 
 .galery-image-box {
-    padding:  10px 10px 10px 0;
+    padding: 10px 10px 10px 0;
     display: inline-block;
 }
 
@@ -70,6 +70,7 @@
 .image-preview {
     display: inline-block;
     margin-right: 10px;
+    padding: 5px 5px 5px 0;
 }
 
 .circle-custom {
@@ -112,11 +113,11 @@ html body {
 }
 
 .sentences {
-    margin: 0 5px 0 0!important;
+    margin: 3px 5px 0 0 !important;
 }
 
 .pair-sentences {
-    margin: 5px 3px 15px 0;
+    margin: 5px 3px 18px 0;
 }
 
 .hidden {
@@ -134,9 +135,11 @@ html body {
     font-weight: 400;
 }
 
-
 .local-settings {
     display: inline-block;
+    font-size: 20px;
+    padding: 0 3px 0 0;
+    opacity: 0.8;
 }
 
 .wrapper-local-settings {
@@ -145,14 +148,19 @@ html body {
 
 @media screen and (min-width: 800px) {
     a:hover {
-    color: #777 !important;
+        color: #777 !important;
     }
 
     label:hover {
-    color: #777 !important;
+        color: #777 !important;
     }
 
     .wrapper-local-settings {
         margin: 20px 0 15px 105px
+    }
+
+    .local-settings {
+        display: inline-block;
+        font-size: 24px;
     }
 }

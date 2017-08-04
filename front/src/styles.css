@@ -138,7 +138,6 @@ html body {
 .local-settings {
     display: inline-block;
     font-size: 20px;
-    padding: 0 3px 0 0;
     opacity: 0.8;
 }
 
@@ -146,7 +145,16 @@ html body {
     margin: 20px 0 15px 15px
 }
 
-@media screen and (min-width: 800px) {
+.wrapper {
+    padding: 0 0 30px 0
+}
+
+.menu-wrapper {
+    margin-top: 0 !important;
+
+}
+
+@media screen and (min-width: 600px) {
     a:hover {
         color: #777 !important;
     }

@@ -1,4 +1,5 @@
-<h3 >Bookmarks <i class="material-icons icon-position " (click)="add()">playlist_add</i></h3>
+<h3 [ngClass]="{wrapper: !marks.length}">Bookmarks <i class="material-icons icon-position " (click)="add()">playlist_add</i>
+</h3>
 <div *ngIf="marks">
   <div *ngFor="let mark of marks">
     <div class="menu-item">

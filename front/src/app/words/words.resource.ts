@@ -36,4 +36,11 @@ export class WordsResource extends Resource {
     })
     getWords: ResourceMethod<WordsQuery, WordValue[]>;
 
+    @ResourceAction({
+        method: RequestMethod.Post,
+        path: '/words/favorite',
+        isArray: true,
+    })
+    getFavorite: ResourceMethod<any[], WordValue[]>;
+
 }

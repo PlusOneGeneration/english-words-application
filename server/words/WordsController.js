@@ -12,23 +12,6 @@ exports.getCategories = function (req, res, next) {
         .then((categories) => res.json(categories))
 };
 
-exports.delete = function (req, res, next) {
-    Word.find({},{_id:1})
-        .limit(100)
-        .sort({'priority': -1})
-        .exec()
-        .then((words) => {
-            console.log('words', words);
-            words = words.map((word) => word._id);
-            Word.remove({_id: {$in: words}})
-                .exec()
-                .then((res) => {
-                    next();
-                });
-
-        })
-};
-
 exports.getWords = function (req, res, next) {
 
     let query = {};
@@ -40,6 +23,18 @@ exports.getWords = function (req, res, next) {
         .skip(+req.query.skipping)
         .limit(+req.query.numberOfWords)
         .sort({'priority': 1})
+        .lean()
+        .exec()
+        .then((words) => {
+                res.json(words)
+            },
+            (err) => {
+                console.log('err', err);
+            });
+};
+
+exports.getFavorite = function (req, res, next) {
+    Word.find({ _id: { $in: req.body }})
         .lean()
         .exec()
         .then((words) => {

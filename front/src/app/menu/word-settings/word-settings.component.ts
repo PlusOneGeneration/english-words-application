@@ -1,4 +1,4 @@
-import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 import {Settings} from "../settings/Settings";
 import {MenuService} from "../menu.service";
 
@@ -12,22 +12,20 @@ export class WordSettingsComponent implements OnInit {
     @Output() wordSettingsUpdated = new EventEmitter();
     settings: Settings = new Settings();
 
+    @Input() isFavorite: boolean = false;
+
     constructor(private settingsService: MenuService) {
     }
 
     ngOnInit() {
-        // this.settings = new Settings();
         this.settingsService.settings$
             .subscribe((settings) => {
                 this.settings = settings ? Object.assign({}, settings) : new Settings();
-                this.settingsChange();
+                this.settings.favorite = this.isFavorite;
             });
     }
 
     settingsChange() {
-        // if (this.settings.images) {
-        //     this.settings.imagesPreview = false;
-        // }
         this.wordSettingsUpdated.emit(this.settings);
     }
 

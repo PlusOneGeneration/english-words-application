@@ -60,5 +60,13 @@
       </label>
     </div>
 
+    <div class="local-settings ">
+      <label class="settings-label">
+        <input class="hidden" type="checkbox" [(ngModel)]="settings.favorite" value="false" name="favorite"
+               (change)="settingsChange($event)" autocomplete="off">
+        <i class="material-icons icon-position local-settings" [ngClass]="{active:settings?.favorite}">favorite</i>
+      </label>
+    </div>
+
   </div>
 </div>

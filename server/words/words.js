@@ -5,6 +5,8 @@ module.exports = function (app) {
 
     app.get('/api/categories', WordsController.getCategories);
 
+    app.post('/api/words/favorite', WordsController.getFavorite);
+
     app.get('/api/words', WordsController.getWords);
 
 }

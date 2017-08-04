@@ -22,7 +22,7 @@ export class CategoriesComponent implements OnInit {
         this.wordsService.getCategories()
             .then((categories) => {
                 this.categories = categories;
-                this.categories.push('All');
+                this.categories.push('All','Favorite');
             })
 
     }

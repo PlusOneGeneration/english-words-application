@@ -25,5 +25,9 @@ export class WordsService {
             .toPromise()
     }
 
-
+    getFavorite(list: any[]) {
+        return this.wordResource.getFavorite(list)
+            .$observable
+            .toPromise()
+    }
 }

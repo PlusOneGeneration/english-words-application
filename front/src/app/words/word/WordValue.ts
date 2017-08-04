@@ -1,4 +1,5 @@
 export class WordValue {
+    _id?:string;
     text: String;
     completed: Boolean;
     priority: Number;

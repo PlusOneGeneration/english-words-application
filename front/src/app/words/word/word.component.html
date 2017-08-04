@@ -1,5 +1,5 @@
-<div class="wrapper-local-settings">
-  <app-word-settings (wordSettingsUpdated)="handleSettingsChange($event)"></app-word-settings>
+<div class="wrapper-local-settings" >
+  <app-word-settings [isFavorite]="isFavorite" (wordSettingsUpdated)="handleSettingsChange($event)"></app-word-settings>
 </div>
 
 <div class="list-group-item">

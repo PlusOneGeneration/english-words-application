@@ -21,7 +21,7 @@
 }
 
 .settings {
-    z-index: 10;
+    z-index: 101;
     display: block;
     position: fixed;
     height: 100vH;
